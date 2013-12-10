@@ -31,7 +31,7 @@ If you use [pathogen.vim](https://github.com/tpope/vim-pathogen) or
 
 Clone the `slash.vim` repository to your bundle-Directory:
 
-    git clone https://github.com/vstm/slash.vim ~/.vim/bundle/slash.vim
+    git clone https://github.com/vstm/slash.vim.git ~/.vim/bundle/slash.vim
 
 Add the "filetype"-line to your `~/.vimrc` to complete the installation.
 
