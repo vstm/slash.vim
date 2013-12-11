@@ -91,6 +91,8 @@ syn match  slashIdentifier   "[a-z][a-zA-Z0-9_']*"  contained display
 syn match  slashIvar         "@[a-z][a-zA-Z0-9_']*"  contained display
 syn match  slashCvar         "@@[a-z][a-zA-Z0-9_']*"  contained display
 
+syn keyword slashSelf self contained
+
 " Boolean
 syn keyword slashBoolean true false contained
 syn keyword slashNil nil contained
@@ -164,7 +166,7 @@ else
 endif
 
 " Clusters
-syn cluster slashClConst contains=slashIdentifier,slashIvar,slashCvar,slashConditional,slashRepeat,slashStatement,slashOperator,slashMemberSelector,slashString,slashSingleString,slashRegexp,slashNumber,slashBoolean,slashNil,slashStructure,slashConstants,slashException,slashMagicConstants
+syn cluster slashClConst contains=slashIdentifier,slashIvar,slashCvar,slashConditional,slashRepeat,slashStatement,slashOperator,slashMemberSelector,slashString,slashSingleString,slashRegexp,slashNumber,slashBoolean,slashNil,slashStructure,slashSelf,slashConstants,slashException,slashMagicConstants
 syn cluster slashClInside contains=@slashClConst,slashComment,slashParent,slashParentError,slashUse
 syn cluster slashClFunction contains=@slashClInside,slashSpecial
 syn cluster slashClTop contains=@slashClFunction
@@ -191,6 +193,7 @@ hi def link slashComment          Comment
 hi def link slashCommentRegion    Comment
 hi def link slashTodo             Todo
 
+hi def link slashSelf             Type
 hi def link slashConstants        Type
 hi def link slashMagicConstants   Constant
 hi def link slashBoolean          Constant
